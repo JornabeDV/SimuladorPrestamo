@@ -1,75 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/3c44aa10f3.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/style.css">
-    <title>Simulador de Préstamos</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prestamos Online</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
-    <header>
-        <h1>SIMULADOR DE PRÉSTAMOS COMERCIALES BEJA</h1>
-    </header>
-    <div class="form">
-        <fieldset>
-            <form>
-                <div>
-                    <label for="capital">CAPITAL
-                        <input type="text" placeholder="Ingrese el capital prestado" id="capital">
-                        <i class="fas fa-coins"></i>
-                    </label>
-                </div>
-                <div>
-                    <label for="cuota">CUOTAS
-                        <input type="text" placeholder="Ingrese las cuotas del préstamo" id="cuota">
-                        <i class="far fa-calendar-alt"></i>
-                    </label>
-                </div>
-                <div>
-                    <label for="interes">INTERES
-                        <input type="text" placeholder="Ingrese el interés a generar" id="interes">
-                        <i class="fas fa-hand-holding-usd"></i>
-                    </label>
-                </div>
-            </form>
-            <button onclick="calcularPrestamoComercial();">CALCULAR</button>
-        </fieldset>
-        <hr>
-        <table class="tab">
-            <thead>
-                <tr>
-                    <td>NRO</td>
-                    <td>CUOTAS DE CAPITAL</td>
-                    <td>INTERES</td>
-                    <td>IMPORTE A PAGAR</td>
-                </tr>
-            </thead>
 
-            <tbody id="tab">
-                <!--ACÁ SE VA A INSERTAR LA TABLA DINÁMICA CREADA CON JAVASCRIPT  -->
-            </tbody>
+  <header>
+    <nav class="navBar">
+        <!-- <input type="checkbox" id="menu"> -->
+        <!-- <label class="burguer" for="menu"> ☰ </label> -->
+        <ul class="textoNav">
+          <li><a class="textoNav__hijo" href="./index.html">INICIO</a></li>
+          <li><a class="textoNav__hijo" href="./pages/comercial.html">COMERCIAL</a></li>
+          <li><a class="textoNav__hijo" href="./pages/hipotecario.html">HIPOTECARIO</a></li>
+          <li><a class="textoNav__hijo" href="./pages/industrial.html">INDUSTRIAL</a></li>
+          <li><a class="textoNav__hijo" href="./pages/personal.html">PERSONAL</a></li>
+          <li><a class="textoNav__hijo" href="./pages/prendario.html">PRENDARIO</a></li>
+          <li><a class="textoNav__hijo" href="./pages/contacto.html">CONTACTO</a></li>
 
-            <tfoot>
-                <tr>
-                    <!-- TOTAL = i // PALABRA TOTAL AL FINAL DE LA ITERACIÓN -->
-                    <td class="ft">TOTAL</td> 
-                    <!-- t1 = TOTAL DE CAPITAL-->
-                    <td id="Total_Cuotas_Capital"></td>
-                    <!-- t2 = TOTAL DE INTERES-->
-                    <td id="Total_Interes"></td>
-                    <!-- t3 = TOTAL DE IMPORTE A PAGAR-->
-                    <td id="Total_a_Pagar"></td>
-                </tr>
-            </tfoot>
-        </table>
+        </ul>
+    </nav>
+    <div class="titulo">
+      <h1>PRÉSTAMOS ONLINE BEJA</h1>
     </div>
+  </header>
+  
+  <main id="prestamo-contenedor"> </main>
 
-    <footer>
-        <button onclick="solicitarContacto();">CONTACTO</button>
+  <footer>
+    <a>Prestamos Online BEJA</a>
+  </footer>
 
-    </footer>
-    <script src="js/comercial.js"></script>
+  <script src="../js/productos.js" type="module"></script>
+  <script src="../js/app.js" type="module"></script>
+  <script src="https://kit.fontawesome.com/df59baf6b8.js" crossorigin="anonymous"></script>
 </body>
+
 </html>
