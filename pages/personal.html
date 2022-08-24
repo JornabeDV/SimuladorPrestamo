@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/3c44aa10f3.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Préstamos Personales Beja</title>
+</head>
+
+<body>
+    <!-- Apertura Header -->
+    <header>
+        <nav class="navBar">
+            <!-- <input type="checkbox" id="menu"> -->
+            <!-- <label class="burguer" for="menu"> ☰ </label> -->
+            <ul class="textoNav">
+              <li><a class="textoNav__hijo" href="../index.html">INICIO</a></li>
+              <li><a class="textoNav__hijo" href="./comercial.html">COMERCIAL</a></li>
+              <li><a class="textoNav__hijo" href="./hipotecario.html">HIPOTECARIO</a></li>
+              <li><a class="textoNav__hijo" href="./industrial.html">INDUSTRIAL</a></li>
+              <li><a class="textoNav__hijo" href="./personal.html">PERSONAL</a></li>
+              <li><a class="textoNav__hijo" href="./prendario.html">PRENDARIO</a></li>
+              <li><a class="textoNav__hijo" href="./contacto.html">CONTACTO</a></li>
+
+            </ul>
+        </nav>
+        <div class="titulo">
+            <h1>PRÉSTAMOS PERSONALES BEJA</h1>
+        </div>      
+    </header>
+    <!-- Cierre Header -->
+
+    <!-- Apertura Main -->
+    <main>
+        <div class="form">
+            <fieldset>
+                <form>
+
+                    <div>
+                        <label for="capital">CAPITAL
+                            <input type="text" placeholder="Ingrese el capital prestado" id="capital">
+                            <i class="fas fa-coins"></i>
+                        </label>
+                    </div>
+                    <div>
+                        <label for="cuota">CUOTAS (Máximo 24 cuotas)
+                            <input type="text" placeholder="Ingrese las cuotas del préstamo" id="cuota">
+                            <i class="far fa-calendar-alt"></i>
+                        </label>
+                    </div>
+                    <div>
+                        <label for="interes">INTERES
+                            <input type="text" placeholder="Ingrese el interés a generar" id="interes">
+                            <i class="fas fa-hand-holding-usd"></i>
+                        </label>
+                    </div>
+                </form>
+                <button id="calcularPrestamo"">CALCULAR</button>
+            </fieldset>
+            <hr>
+            <table class="tab">
+                <thead>
+                    <tr>
+                        <td>NRO</td>
+                        <td>CUOTAS DE CAPITAL</td>
+                        <td>INTERES</td>
+                        <td>IMPORTE A PAGAR</td>
+                    </tr>
+                </thead>
+
+                <tbody id="tab">
+                    <!--ACÁ SE VA A INSERTAR LA TABLA DINÁMICA CREADA CON JAVASCRIPT  -->
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <!-- TOTAL = i // PALABRA TOTAL AL FINAL DE LA ITERACIÓN -->
+                        <td class="ft">TOTAL</td> 
+                        <!-- t1 = TOTAL DE CAPITAL-->
+                        <td id="Total_Cuotas_Capital"></td>
+                        <!-- t2 = TOTAL DE INTERES-->
+                        <td id="Total_Interes"></td>
+                        <!-- t3 = TOTAL DE IMPORTE A PAGAR-->
+                        <td id="Total_a_Pagar"></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </main> 
+    <!-- Cierre Main -->
+    <!-- Apertura footer -->
+    <footer>
+        <div id='whatsapp-chat' class='hide'>
+            <div class='header-chat'>
+            <div class='head-home'><h3>Préstamos BEJA</h3>
+                <div class='info-avatar'><img src='https://sistemadecotizaciones.files.wordpress.com/2020/08/supportmale.png'/>
+                </div>
+            </div>
+         
+            <div class='get-new'>
+                <div id='get-label'>Soporte</div>
+                <div id='get-nama'>Servicio al cliente</div>
+            </div>
+        </div>
+         
+        <div class='start-chat'>
+        <div class='first-msg'><span>¡Hola! ¿Qué puedo hacer por ti?</span></div>
+        <div class='blanter-msg'><textarea id='chat-input' placeholder='Escribe un mensaje' maxlength='120' row='1'></textarea>
+        <a href='#' onclick="enviar_mensaje();" id='send-it'>Enviar</a></div></div>
+        <div id='get-number'>2995249409</div><a class='close-chat' onclick="cerrar_chat();" href='#'>×</a>
+        </div>
+        <a class='blantershow-chat' onclick="mostrar_chat();" href='#' title='Show Chat'><svg width="20" viewBox="0 0 24 24"><defs/><path fill="#eceff1" d="M20.5 3.4A12.1 12.1 0 0012 0 12 12 0 001.7 17.8L0 24l6.3-1.7c2.8 1.5 5 1.4 5.8 1.5a12 12 0 008.4-20.3z"/><path fill="#4caf50" d="M12 21.8c-3.1 0-5.2-1.6-5.4-1.6l-3.7 1 1-3.7-.3-.4A9.9 9.9 0 012.1 12a10 10 0 0117-7 9.9 9.9 0 01-7 16.9z"/><path fill="#fafafa" d="M17.5 14.3c-.3 0-1.8-.8-2-.9-.7-.2-.5 0-1.7 1.3-.1.2-.3.2-.6.1s-1.3-.5-2.4-1.5a9 9 0 01-1.7-2c-.3-.6.4-.6 1-1.7l-.1-.5-1-2.2c-.2-.6-.4-.5-.6-.5-.6 0-1 0-1.4.3-1.6 1.8-1.2 3.6.2 5.6 2.7 3.5 4.2 4.2 6.8 5 .7.3 1.4.3 1.9.2.6 0 1.7-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.4z"/></svg> 
+        Chatea con nosotros</a>
+
+    </footer>
+    <!-- Cierre Footer -->
+
+    <!-- Apertura Scripts -->
+    <script src="../js/whatsapp.js"></script>
+    <script src="../js/personal.js"></script>
+    <!-- Cierre Scripts -->
+
+</body>
+</html>
